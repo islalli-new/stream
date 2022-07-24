@@ -1,0 +1,205 @@
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suhdo Stream</title>
+    <script
+      src="https://kit.fontawesome.com/afddd0e3e4.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body onload="time()">
+    <style>
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        min-height: 100%;
+        font-family: monospace;
+        /* background-color: black; */
+      }
+      .slide {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
+      .tt-hover {
+      }
+      .tt-cracha {
+        font-size: 10vh;
+        animation: opacity 1s;
+      }
+      .tt-nome {
+        background-color: yellow;
+        position: relative;
+        margin: 0 0 0 0.8em;
+        padding: 0 0.1em 0 0.3em;
+        z-index: 2;
+      }
+      .tt-nome::after,
+      .tt-nome::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -0.2em;
+        width: 0.4em;
+        height: 100%;
+        transform: skewX(-15deg);
+        background-color: yellow;
+        z-index: 1;
+      }
+      .tt-nome::after {
+        left: -0.5em;
+        width: 0.2em;
+      }
+
+      #foco .tt-nome,
+      #foco .tt-nome::after,
+      #foco .tt-nome::before {
+        background-color: blueviolet;
+        color: white;
+      }
+      .tt-sub {
+        background-color: aqua;
+        font-size: 0.5em;
+        margin: 0 1em 0 1.5em;
+        padding: 0.4em;
+      }
+
+      .typed {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .typed::after {
+        content: "";
+        position: absolute;
+        width: 0.2em;
+        height: 1em;
+        margin-top: .2em;
+        background-color: black;
+        animation: blink 1s infinite;
+      }
+
+      .nome {
+        animation: appear 1s;
+      }
+      .nome::after {
+        display: none;
+      }
+      .sub {
+        animation: appear 2s;
+      }
+
+      @keyframes opacity {
+        0% {
+          opacity: 0%;
+        }
+        100% {
+          opacity: 100%;
+        }
+      }
+
+      @keyframes appear {
+        0% {
+          width: 0%;
+        }
+        50% {
+          width: 0%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 100%;
+        }
+        49% {
+          opacity: 100%;
+        }
+        50% {
+          opacity: 0%;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      .texto-invertido {
+        color: white;
+        animation: opacity 1s;
+      }
+      h1 {
+        font-family: sans-serif;
+        font-weight: lighter;
+        margin: 0;
+        font-size: 6em;
+      }
+      h2 {
+        font-weight: lighter;
+        color: rgb(0, 230, 138);
+        font-size: 3em;
+      }
+      h3 {
+        font-size: 2em;
+      }
+      #assunto,
+      #foco,
+      #pessoa1,
+      #pessoa2 {
+        display: none;
+      }
+    </style>
+
+
+    <div class="slide" id="assunto">
+      <div class="texto-invertido">
+        <h1>Live stream</h1>
+        <h2>Experimentando setup do Islalli</h2>
+        <h3>Por Israel Lalli | 23/07-2022</h3>
+      </div>
+    </div>
+
+    <div class="slide" id="foco">
+      <div class="tt-cracha">
+        <div class="mask">
+          <div class="tt-nome">
+            <strong class="typed nome">Assunto foco</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" id="pessoa1">
+      <div class="tt-cracha">
+        <div class="mask">
+          <div class="tt-nome">
+            <strong class="typed nome">Israel Lalli</strong>
+          </div>
+          <div class="tt-sub">
+            <span class="typed sub">UX Designer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" id="pessoa2">
+      <div class="tt-cracha">
+        <div class="mask">
+          <div class="tt-nome">
+            <strong class="typed nome">Marcio Brandão</strong>
+          </div>
+          <div class="tt-sub">
+            <span class="typed sub">Full Stack Dev</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>

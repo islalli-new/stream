@@ -1,0 +1,134 @@
+<html>
+
+<head>
+    <title>Suhdo Stream</title>
+    <script src="https://kit.fontawesome.com/afddd0e3e4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        :root {
+            --el-1-size: 8vw;
+            --el-1-rgb: 0,230,138;
+
+            --el-2-size: 6vw;
+            --el-2-rgb: 461,41,255;
+        }
+        .canvas {
+            background-color: #111522;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .el-glow-1 {
+            background-color: rgb(var(--el-1-rgb),.2);
+            width: 1px;
+            height: 1px;
+            border-radius: var(--el-1-size);
+            box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.2);
+            animation: el-1-pulse 25s infinite ease, el-1-arround 30s infinite ease;
+        }
+
+        @keyframes el-1-pulse {
+            0% {
+                box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.2);
+            }
+            25% {
+                box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.4);
+            }
+            50% {
+                box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.3);
+            }
+            75% {
+                box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.6);
+            }
+            100% {
+                box-shadow: 0 0 calc(var(--el-1-size) * 2) calc(var(--el-1-size) * 2) rgb(var(--el-1-rgb),.2);
+            }
+        }
+
+        @keyframes el-1-arround {
+            0% {
+                transform: translate(1vw,1vw) scale(1,1) rotate(0);
+            }
+            20% {
+                transform: translate(3vw,3vw) scale(1,1.1) rotate(15deg);
+            }
+            40% {
+                transform: translate(4vw,3vw) scale(1.1,1) rotate(10deg);
+            }
+            60% {
+                transform: translate(1vw,2vw) scale(1,1.05) rotate(45deg);
+            }
+            80% {
+                transform: translate(-2vw,-1vw) scale(.5,1) rotate(30deg);
+            }
+            100% {
+                transform: translate(1vw,1vw) scale(1,1) rotate();
+            }
+        }
+
+        .el-glow-2 {
+            background-color: rgb(var(--el-2-rgb),.2);
+            width: 1px;
+            height: 1px;
+            border-radius: var(--el-2-size);
+            box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.2);
+            animation: el-2-pulse 25s infinite ease, el-2-arround 30s infinite ease;
+        }
+
+        @keyframes el-2-pulse {
+            0% {
+                box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.2);
+            }
+            25% {
+                box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.6);
+            }
+            50% {
+                box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.4);
+            }
+            75% {
+                box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.3);
+            }
+            100% {
+                box-shadow: 0 0 calc(var(--el-2-size) * 2) calc(var(--el-2-size) * 2) rgb(var(--el-2-rgb),.2);
+            }
+        }
+
+        @keyframes el-2-arround {
+            0% {
+                transform: translate(-8vw,-8vw) scale(1,1) rotate(0);
+            }
+            20% {
+                transform: translate(-6vw,-6vw) scale(1,1.1) rotate(15deg);
+            }
+            40% {
+                transform: translate(-8vw,-4vw) scale(1.1,1) rotate(10deg);
+            }
+            60% {
+                transform: translate(-6vw,-10vw) scale(.5,2) rotate(30deg);
+            }
+            80% {
+                transform: translate(-12vw,-3vw) scale(1,1.05) rotate(45deg);
+            }
+            100% {
+                transform: translate(-8vw,-8vw) scale(1,1) rotate();
+            }
+        }
+    </style>
+
+<div class="canvas">
+        <div class="el-glow-1"></div>
+        <div class="el-glow-2"></div>
+</div>
+
+</body>
+
+</html>
